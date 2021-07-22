@@ -4131,3 +4131,44 @@ textarea {
     -webkit-user-drag: none;
     user-drag: none;
 }
+
+.patr1 {
+    background: yellowgreen;
+    height: 100vh;
+    width: 100%;
+    background: rgb(29, 29, 29);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 850px;
+}
+
+.patr1-img img {
+    width: 1200px;
+    position: relative;
+    left: -100px;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+.patr-introduce {
+    width: 500px;
+    min-width: 500px;
+    height: 400px;
+    position: relative;
+    left: 110px;
+    top: -110px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    text-align: justify
+}
+
+.patr-introduce p {
+    font-size: 29px;
+    color: white;
+    letter-spacing: 3px;
+    user-select: none;
+}
