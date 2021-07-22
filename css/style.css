@@ -4101,11 +4101,10 @@ textarea {
 }
 
 .p2_inner_text {
-    margin-top: 5px;
     position: absolute;
     z-index: 1;
+    margin-top: 5px;
     margin-left: 15px;
-    writing-mode: vertical-lr;
 }
 
 .p2_imgwrapper1 {
@@ -4126,4 +4125,9 @@ textarea {
 
 .p2_imgwrapper5 {
     padding-top: 30px;
+}
+
+.p2_img {
+    -webkit-user-drag: none;
+    user-drag: none;
 }
