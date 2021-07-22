@@ -4078,4 +4078,56 @@ textarea {
 
 .thankslist {
     position: te;
-}bsolu
+}
+
+#pt2 {
+    margin: 0 auto;
+}
+
+.idk {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    overflow: visible;
+    justify-content: center;
+    flex-basis: 1000px;
+}
+
+.p2_imgwrapper {
+    padding: 0 15px;
+    position: relative;
+}
+
+.p2_inner_text {
+    position: absolute;
+    z-index: 1;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.p2_imgwrapper1 {
+    margin-top: 40px;
+}
+
+.p2_imgwrapper2 {
+    margin-top: 20px;
+}
+
+.p2_imgwrapper3 {
+    margin-top: 80px;
+}
+
+.p2_imgwrapper4 {
+    margin-top: 120px;
+}
+
+.p2_imgwrapper5 {
+    padding-top: 30px;
+}
+
+.p2_img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
