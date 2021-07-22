@@ -4101,9 +4101,10 @@ textarea {
 }
 
 .p2_inner_text {
-    margin-top: 0px;
+    margin-top: 5px;
     position: absolute;
     z-index: 1;
+    margin-left: 15px;
     writing-mode: vertical-lr;
 }
 
