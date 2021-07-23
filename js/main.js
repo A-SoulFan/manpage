@@ -1,10 +1,10 @@
-$(document).ready(function($) {
+$(document).ready(function ($) {
 
     "use strict";
 
     // loader
-    var loader = function() {
-        setTimeout(function() {
+    var loader = function () {
+        setTimeout(function () {
             if ($('#ftco-loader').length > 0) {
                 $('#ftco-loader').removeClass('show');
             }
@@ -12,7 +12,7 @@ $(document).ready(function($) {
     };
     loader();
 
-    var carousel = function() {
+    var carousel = function () {
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
@@ -36,8 +36,8 @@ $(document).ready(function($) {
     carousel();
 
     // scroll
-    var scrollWindow = function() {
-        $(window).scroll(function() {
+    var scrollWindow = function () {
+        $(window).scroll(function () {
             var $w = $(this),
                 st = $w.scrollTop(),
                 navbar = $('.ftco_navbar'),
@@ -75,14 +75,14 @@ $(document).ready(function($) {
     };
     scrollWindow();
 
-    var counter = function() {
+    var counter = function () {
 
-        $('#section-counter').waypoint(function(direction) {
+        $('#section-counter').waypoint(function (direction) {
 
             if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
 
-                var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-                $('.ftco-number').each(function() {
+                var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+                $('.ftco-number').each(function () {
                     var $this = $(this),
                         num = $this.data('number');
                     console.log(num);
@@ -96,25 +96,25 @@ $(document).ready(function($) {
 
         }, { offset: '95%' });
 
-    }
+    };
     counter();
 
 
 
-    var contentWayPoint = function() {
+    var contentWayPoint = function () {
         var i = 0;
-        $('.ftco-animate').waypoint(function(direction) {
+        $('.ftco-animate').waypoint(function (direction) {
 
             if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
 
                 i++;
 
                 $(this.element).addClass('item-animate');
-                setTimeout(function() {
+                setTimeout(function () {
 
-                    $('body .ftco-animate.item-animate').each(function(k) {
+                    $('body .ftco-animate.item-animate').each(function (k) {
                         var el = $(this);
-                        setTimeout(function() {
+                        setTimeout(function () {
                             var effect = el.data('animate-effect');
                             if (effect === 'fadeIn') {
                                 el.addClass('fadeIn ftco-animated');
@@ -138,15 +138,15 @@ $(document).ready(function($) {
     contentWayPoint();
 
     // navigation
-    var OnePageNav = function() {
-        $(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on('click', function(e) {
+    var OnePageNav = function () {
+        $(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on('click', function (e) {
             e.preventDefault();
 
             var hash = this.hash,
                 navToggler = $('.navbar-toggler');
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 700, 'easeInOutExpo', function() {
+            }, 700, 'easeInOutExpo', function () {
                 window.location.hash = hash;
             });
 
@@ -155,9 +155,9 @@ $(document).ready(function($) {
                 navToggler.click();
             }
         });
-        $('body').on('activate.bs.scrollspy', function() {
+        $('body').on('activate.bs.scrollspy', function () {
             console.log('nice');
-        })
+        });
     };
     OnePageNav();
 });
@@ -205,7 +205,7 @@ function getOsInfo() {
 
 //part2 self-adaption
 var flag = false;
-window.onload = function() {
+window.onload = function () {
     var p2Imgs = document.getElementsByClassName("p2_img");
     var p2ImgWrappers = document.getElementsByClassName("p2_imgwrapper");
     var p2MainFlexWrapper = document.getElementById("p2MainFlexWrapper");
@@ -238,7 +238,7 @@ window.onload = function() {
             p2ImgWrappers[i].style.paddingLeft = p2ImgWrapperPadding.toString() + "px";
         }
     }
-    window.onresize = function() {
+    window.onresize = function () {
         if (window.innerWidth / window.innerHeight > 1) {
             if (flag == true) {
                 location.reload();
@@ -257,5 +257,11 @@ window.onload = function() {
                 flag = true;
             }
         }
+    };
+};
+$(".navbar-toggler").blur(function (event) {
+    var screenWidth = window.innerWidth;
+    if (screenWidth < 768) {
+        $(".navbar-collapse").collapse('hide');
     }
-}
+});
