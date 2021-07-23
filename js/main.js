@@ -160,6 +160,62 @@ $(document).ready(function($) {
         })
     };
     OnePageNav();
-
-
 });
+
+
+//part2 self-adaption
+var flag = false;
+window.onload = function() {
+    var p2Imgs = document.getElementsByClassName("p2_img");
+    var p2ImgWrappers = document.getElementsByClassName("p2_imgwrapper");
+    var p2MainFlexWrapper = document.getElementById("p2MainFlexWrapper");
+    var p2ImgWrapper3 = document.getElementsByClassName("p2_imgwrapper3")[0];
+    var p2ImgWrapper4 = document.getElementsByClassName("p2_imgwrapper4")[0];
+    console.log(p2ImgWrapper3.classList);
+    if ((window.innerWidth / window.innerHeight < 1)) {
+        p2MainFlexWrapper.className = "p2MainFlexWrapperMobile";
+        p2ImgWrapper3.classList.toggle("p2_imgwrapper3mobile");
+        p2ImgWrapper4.classList.toggle("p2_imgwrapper4mobile");
+        var p2ImgWrapperMobile01 = document.createElement("div");
+        p2ImgWrapperMobile01.appendChild(p2MainFlexWrapper.children[0]);
+        p2ImgWrapperMobile01.appendChild(p2MainFlexWrapper.children[0]);
+        var p2ImgWrapperMobile234 = document.createElement("div");
+        p2ImgWrapperMobile234.appendChild(p2MainFlexWrapper.children[0]);
+        p2ImgWrapperMobile234.appendChild(p2MainFlexWrapper.children[0]);
+        p2ImgWrapperMobile234.appendChild(p2MainFlexWrapper.children[0]);
+        p2MainFlexWrapper.appendChild(p2ImgWrapperMobile01);
+        p2MainFlexWrapper.appendChild(p2ImgWrapperMobile234);
+        for (var i = 0; i < p2Imgs.length; i++) {
+            var p2ImgWrapperPadding = 10 * p2Imgs[i].width / 345;
+            p2Imgs[i].width = window.innerWidth * 0.4 - p2ImgWrapperPadding;
+            p2ImgWrappers[i].style.paddingLeft = p2ImgWrapperPadding.toString() + "px";
+        }
+    } else {
+        p2MainFlexWrapper.className = "p2MainFlexWrapperNormal";
+        for (var i = 0; i < p2Imgs.length; i++) {
+            var p2ImgWrapperPadding = 15 * p2Imgs[i].width / 345;
+            p2Imgs[i].width = window.innerWidth * 0.16 - p2ImgWrapperPadding;
+            p2ImgWrappers[i].style.paddingLeft = p2ImgWrapperPadding.toString() + "px";
+        }
+    }
+    window.onresize = function() {
+        if (window.innerWidth / window.innerHeight > 1) {
+            if (flag == true) {
+                location.reload();
+                flag = false;
+            }
+            p2MainFlexWrapper.className = "p2MainFlexWrapperNormal";
+            for (var i = 0; i < p2Imgs.length; i++) {
+                var p2ImgWrapperPadding = 15 * p2Imgs[i].width / 345;
+                p2Imgs[i].width = window.innerWidth * 0.16 - p2ImgWrapperPadding;
+                p2ImgWrappers[i].style.paddingLeft = p2ImgWrapperPadding.toString() + "px";
+            }
+        }
+        if (window.innerWidth / window.innerHeight < 1) {
+            if (flag == false) {
+                location.reload();
+                flag = true;
+            }
+        }
+    }
+}
