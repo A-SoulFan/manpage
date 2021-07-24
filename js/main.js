@@ -217,43 +217,56 @@ var p2ImgWrappers = document.getElementsByClassName("p2_imgwrapper");
 var p2MainFlexWrapper = document.getElementById("p2MainFlexWrapper");
 var p2ImgWrapper3 = document.getElementsByClassName("p2_imgwrapper3")[0];
 var p2ImgWrapper4 = document.getElementsByClassName("p2_imgwrapper4")[0];
+var p2ImgWrapperMobile01 = document.createElement("div");
+var p2ImgWrapperMobile234 = document.createElement("div");
 
-function part2AutoAdaption() {
-    if ((window.innerWidth / window.innerHeight < 1)) {
-        p2MainFlexWrapper.className = "p2MainFlexWrapperMobile";
-        p2ImgWrapper3.classList.toggle("p2_imgwrapper3mobile");
-        p2ImgWrapper4.classList.toggle("p2_imgwrapper4mobile");
-        var p2ImgWrapperMobile01 = document.createElement("div");
-        p2ImgWrapperMobile01.appendChild(p2MainFlexWrapper.children[0]);
-        p2ImgWrapperMobile01.appendChild(p2MainFlexWrapper.children[0]);
-        var p2ImgWrapperMobile234 = document.createElement("div");
-        p2ImgWrapperMobile234.appendChild(p2MainFlexWrapper.children[0]);
-        p2ImgWrapperMobile234.appendChild(p2MainFlexWrapper.children[0]);
-        p2ImgWrapperMobile234.appendChild(p2MainFlexWrapper.children[0]);
-        p2MainFlexWrapper.appendChild(p2ImgWrapperMobile01);
-        p2MainFlexWrapper.appendChild(p2ImgWrapperMobile234);
-        for (var i = 0; i < p2Imgs.length; i++) {
-            var p2ImgWrapperPadding = 10 * p2Imgs[i].width / 345;
-            p2Imgs[i].width = window.innerWidth * 0.4 - p2ImgWrapperPadding;
-            p2ImgWrappers[i].style.paddingLeft = p2ImgWrapperPadding.toString() + "px";
+
+function part2AutoAdaption(f) {
+    if (f == true) {
+        if ((window.innerWidth / window.innerHeight < 1)) {
+            p2MainFlexWrapper.className = "p2MainFlexWrapperMobile";
+            p2ImgWrapper3.classList.toggle("p2_imgwrapper3mobile");
+            p2ImgWrapper4.classList.toggle("p2_imgwrapper4mobile");
+            p2ImgWrapperMobile01.appendChild(p2MainFlexWrapper.children[0]);
+            p2ImgWrapperMobile01.appendChild(p2MainFlexWrapper.children[0]);
+            p2ImgWrapperMobile234.appendChild(p2MainFlexWrapper.children[0]);
+            p2ImgWrapperMobile234.appendChild(p2MainFlexWrapper.children[0]);
+            p2ImgWrapperMobile234.appendChild(p2MainFlexWrapper.children[0]);
+            p2MainFlexWrapper.appendChild(p2ImgWrapperMobile01);
+            p2MainFlexWrapper.appendChild(p2ImgWrapperMobile234);
+            for (var i = 0; i < p2Imgs.length; i++) {
+                var p2ImgWrapperPadding = 10 * p2Imgs[i].width / 345;
+                p2Imgs[i].width = window.innerWidth * 0.4 - p2ImgWrapperPadding;
+                p2ImgWrappers[i].style.paddingLeft = p2ImgWrapperPadding.toString() + "px";
+            }
+        } else {
+            p2MainFlexWrapper.className = "p2MainFlexWrapperNormal";
+            for (var i = 0; i < p2Imgs.length; i++) {
+                var p2ImgWrapperPadding = 15 * p2Imgs[i].width / 345;
+                p2Imgs[i].width = window.innerWidth * 0.16 - p2ImgWrapperPadding;
+                p2ImgWrappers[i].style.paddingLeft = p2ImgWrapperPadding.toString() + "px";
+            }
         }
     } else {
         p2MainFlexWrapper.className = "p2MainFlexWrapperNormal";
-        for (var i = 0; i < p2Imgs.length; i++) {
-            var p2ImgWrapperPadding = 15 * p2Imgs[i].width / 345;
-            p2Imgs[i].width = window.innerWidth * 0.16 - p2ImgWrapperPadding;
-            p2ImgWrappers[i].style.paddingLeft = p2ImgWrapperPadding.toString() + "px";
-        }
+        p2ImgWrapper3.classList.toggle("p2_imgwrapper3mobile");
+        p2ImgWrapper4.classList.toggle("p2_imgwrapper4mobile");
+        p2MainFlexWrapper.appendChild(p2ImgWrapperMobile01.children[0]);
+        p2MainFlexWrapper.appendChild(p2ImgWrapperMobile01.children[0]);
+        p2MainFlexWrapper.appendChild(p2ImgWrapperMobile234.children[0]);
+        p2MainFlexWrapper.appendChild(p2ImgWrapperMobile234.children[0]);
+        p2MainFlexWrapper.appendChild(p2ImgWrapperMobile234.children[0]);
     }
+
 }
-window.onload = part2AutoAdaption();
+window.onload = part2AutoAdaption(true);
 window.onresize = function() {
-    if (window.innerWidth / window.innerHeight > 1) {
+    if (window.innerWidth / window.innerHeight >= 1) {
         if (flag == true) {
             flag = false;
-            part2AutoAdaption();
+            part2AutoAdaption(false);
         }
-        p2MainFlexWrapper.className = "p2MainFlexWrapperNormal";
+        //p2MainFlexWrapper.className = "p2MainFlexWrapperNormal";
         for (var i = 0; i < p2Imgs.length; i++) {
             var p2ImgWrapperPadding = 15 * p2Imgs[i].width / 345;
             p2Imgs[i].width = window.innerWidth * 0.16 - p2ImgWrapperPadding;
@@ -261,14 +274,8 @@ window.onresize = function() {
         }
     } else if (flag == false) {
         flag = true;
-        location.reload();
+        part2AutoAdaption(true);
     }
-    /* if ((window.innerWidth / window.innerHeight < 1) && ((getOsInfo().name == 'iphone') || (getOsInfo().name == 'android'))) {
-         if (flag == false) {
-             location.reload();
-             flag = true;
-         }
-     }*/
 };
 
 
