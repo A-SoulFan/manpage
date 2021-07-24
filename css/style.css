@@ -3647,6 +3647,10 @@ textarea {
     line-height: 1.5;
 }
 
+.ftco-footer h5 {
+    color: #FFFFFF;
+}
+
 @media screen and (max-width: 768px) {
     .ftco-section .ftco-heading,
     .ftco-footer .ftco-heading {
@@ -4227,4 +4231,43 @@ textarea {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+#section-about {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#developer-list {
+    margin-left: 7%;
+    width: 55%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#developer-list .title {
+    margin-bottom: 4rem;
+    color: white;
+    font-size: 4rem;
+}
+
+#developer-names span {
+    padding: 0 0.2rem;
+}
+
+#developer-names {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bar-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+.asoul-bar-bg {
+    position: absolute;
+    top: 0;
+    left: -5%;
 }

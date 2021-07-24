@@ -161,5 +161,11 @@ $(document).ready(function($) {
     };
     OnePageNav();
 
-
+    // get developer list
+    var instantiateDeveloperList = function() {
+        $('#developer-names').append(Array(100).fill('<span>阿草</span>').join(''))
+        console.log($('#developer-names'));
+    }
+    instantiateDeveloperList();
+    console.log('hello');
 });
