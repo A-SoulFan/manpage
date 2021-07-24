@@ -4236,10 +4236,13 @@ textarea {
 #section-about {
     padding-top: 0;
     padding-bottom: 0;
+    z-index: 500;
+    overflow: visible;
 }
 
 #developer-list {
     margin-left: 7%;
+    margin-bottom: 50px;
     width: 55%;
     color: white;
     font-size: 1.5rem;
@@ -4266,8 +4269,35 @@ textarea {
     height: 500px;
 }
 
-.asoul-bar-bg {
+/* #section-pricing { */
+/*     z-index: 1100; */
+/* } */
+/*  */
+/* #section-pricing::after { */
+/*     visibility: hidden; */
+/* } */
+
+#section-about::after {
+    z-index: 1100;
+}
+
+.asoul-bar-vert {
+    height: 120%;
+    width: 16rem;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    background: linear-gradient(to left bottom, rgba(156, 105, 214, 0.8), rgb(217, 126, 220, 0.8));
+    z-index: 1000;
+}
+
+.asoul-bar {
     position: absolute;
     top: 0;
-    left: -5%;
+    left: 0;
+    width: 100%;
+}
+
+.asoul-bar-bg {
+    overflow: hidden;
 }

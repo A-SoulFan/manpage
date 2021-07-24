@@ -163,7 +163,7 @@ $(document).ready(function($) {
 
     // get developer list
     var instantiateDeveloperList = function() {
-        $('#developer-names').append(Array(100).fill('<span>阿草</span>').join(''))
+        $('#developer-names').append(Array(76).fill('<span>阿草</span>').join(''))
         console.log($('#developer-names'));
     }
     instantiateDeveloperList();
