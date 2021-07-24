@@ -235,20 +235,12 @@ function part1AnimationClass() {
     function part1Animation() {
         var scrollTop = $(document).scrollTop();
         var docTop = Number(scrollTop) + Number(windowHeight)
-        if (docTop > part1Top && scrollTop < part1Top + part1Height) {
-            $(".patr1-img img").css("transform", "translateY(0)")
+        if (docTop > part1Top + 200 && scrollTop < part1Top + part1Height) {
+            $(".patr1-img").css("transform", "translateY(0)")
             if (screenWidth < 768) {
                 $(".part1-mobile-introduce").css("transform", "translateY(0)")
             } else {
                 $(".part-introduce").css("transform", "translateY(0)")
-            }
-        } else {
-            if (screenWidth < 768) {
-                $(".patr1-img img").css("transform", "translateY(150px)")
-                $(".part1-mobile-introduce").css("transform", "translateY(-150px)")
-            } else {
-                $(".patr1-img img").css("transform", "translateY(300px)")
-                $(".part-introduce").css("transform", "translateY(-300px)")
             }
         }
     }
