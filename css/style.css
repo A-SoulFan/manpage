@@ -4195,7 +4195,7 @@ textarea {
 }
 
 .p2_imgwrapper {
-    padding: 0 15px;
+    padding: 0 0.78vw;
     position: relative;
 }
 
@@ -4237,6 +4237,54 @@ textarea {
 .p2_img {
     -webkit-user-drag: none;
     user-zoom: none;
+    width: 15.6vw;
+}
+
+.p2ImgWrapper12 {
+    display: flex;
+}
+
+.p2ImgWrapper345 {
+    display: flex;
+}
+
+@media screen and (orientation:portrait) {
+    .p2MainFlexWrapperNormal {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-shrink: 1;
+        justify-content: center;
+        align-items: center;
+    }
+    .p2ImgWrapper12 {
+        display: block;
+    }
+    .p2ImgWrapper345 {
+        display: block;
+    }
+    .p2_imgwrapper1 {
+        margin-top: 2vw;
+    }
+    .p2_imgwrapper2 {
+        margin-top: 2vw;
+    }
+    .p2_imgwrapper3 {
+        margin-top: 2vw;
+    }
+    .p2_imgwrapper4 {
+        margin-top: 2vw;
+    }
+    .p2_imgwrapper5 {
+        margin-top: 2vw;
+    }
+    .p2_img {
+        width: 40vw;
+    }
+    .p2_imgwrapper {
+        padding: 0 1vw;
+    }
 }
 
 .decorate {
