@@ -4134,15 +4134,58 @@ textarea {
     min-height: 850px;
 }
 
-.patr1-img img {
+.patr1-img {
+    transform: translateY(300px);
+    transition: transform .8s ease-in-out;
     width: 1200px;
-    position: relative;
     left: -100px;
     -webkit-user-drag: none;
     user-drag: none;
 }
 
-.patr-introduce {
+.patr1-img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.part1-bg-1 {
+    position: relative;
+    width: 65%;
+    z-index: 1;
+}
+
+.part1-bg-2 {
+    position: absolute;
+    top: -10%;
+    right: 0;
+    width: 30%;
+}
+.part1-bg-3 {
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    width: 50%;
+}
+.part1-bg-4 {
+    position: absolute;
+    top: 30%;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.part1-bg-5 {
+    position: absolute;
+    top: 66%;
+    left: 60%;
+    width: 80%;
+    transform: translateX(-50%);
+}
+
+.part-introduce {
+    transform: translateY(-300px);
+    transition: transform .8s ease-in-out;
     width: 500px;
     min-width: 500px;
     height: 400px;
@@ -4156,11 +4199,76 @@ textarea {
     text-align: justify
 }
 
-.patr-introduce p {
+.part-introduce p {
     font-size: 29px;
     color: white;
     letter-spacing: 3px;
     user-select: none;
+}
+.part1-mobile-introduce {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .part1-mobile {
+        display: block;
+        flex-wrap: wrap;
+    }
+    .part-introduce {
+        display: none;
+    }
+    .part1-mobile-introduce {
+        display: block;
+        padding: 0 40px;
+        transition: transform .8s ease-in-out;
+        transform: translateY(-150px);
+    }
+    .part1-mobile-introduce,
+    .patr1-img {
+        width: 100%;
+        min-width: 100%;
+    }
+    .introduce-wrapper {
+        position: relative;
+    }
+    .introduce-wrapper .part1-bg-3 {
+        position: absolute;
+        top: -24%;
+        left: -10%;
+        z-index: -1;
+        transform: translateX(-50%) rotate(90deg);
+    }
+    .mobile-decorate {
+        color: #fff;
+        font-size: 14px;
+        line-height: 10px;
+    }
+    .mobile-decorate-2 {
+        text-align: right;
+    }
+    .part1-mobile-introduce p {
+        font-size: 14px;
+        color: #fff;
+        margin: 10px 0;
+        padding: 0 20px;
+        letter-spacing: 2px;
+    }
+    .patr1-img {
+        margin-top: 50px;
+        transform: translateY(150px);
+    }
+    .patr1-img-wrapper {
+        width: 120%;
+        transform: translateX(-10%);
+    }
+    .patr1-img-wrapper .part1-bg-3 {
+        display: none;
+    }
+    .part1-bg-4 {
+        left: 63%;
+    }
+    .part1-bg-5 {
+        left: 74%;
+    }
 }
 
 #pt2 {
