@@ -4130,11 +4130,13 @@ textarea {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     min-height: 850px;
 }
 
 .patr1-img img {
+    transform: translateY(300px);
+    transition: transform .8s ease-in-out;
     width: 1200px;
     position: relative;
     left: -100px;
@@ -4142,7 +4144,9 @@ textarea {
     user-drag: none;
 }
 
-.patr-introduce {
+.part-introduce {
+    transform: translateY(-300px);
+    transition: transform .8s ease-in-out;
     width: 500px;
     min-width: 500px;
     height: 400px;
@@ -4156,11 +4160,54 @@ textarea {
     text-align: justify
 }
 
-.patr-introduce p {
+.part-introduce p {
     font-size: 29px;
     color: white;
     letter-spacing: 3px;
     user-select: none;
+}
+.part1-mobile-introduce {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .part1-mobile {
+        display: block;
+        flex-wrap: wrap;
+    }
+    .part-introduce {
+        display: none;
+    }
+    .part1-mobile-introduce {
+        display: block;
+        padding: 0 40px;
+        transition: transform .8s ease-in-out;
+        transform: translateY(-150px);
+    }
+    .part1-mobile-introduce,
+    .patr1-img {
+        width: 100%;
+        min-width: 100%;
+    }
+    .mobile-decorate {
+        color: #fff;
+        font-size: 14px;
+        line-height: 10px;
+    }
+    .mobile-decorate-2 {
+        text-align: right;
+    }
+    .part1-mobile-introduce p {
+        font-size: 14px;
+        color: #fff;
+        margin: 10px 0;
+        padding: 0 20px;
+        letter-spacing: 2px;
+    }
+    .patr1-img img {
+        transform: translateY(150px);
+        width: 120%;
+        left: -10%;
+    }
 }
 
 #pt2 {
