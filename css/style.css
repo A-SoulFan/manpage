@@ -4562,6 +4562,7 @@ textarea {
     transform: rotate(-2deg);
     position: absolute;
     z-index: 2;
+    overflow: hidden;
 }
 
 .part3Bottom {
@@ -5029,4 +5030,12 @@ textarea {
     .p3_imgwrapper1 .p3_inner_text_wrapper {
         padding-top: 20px;
     }
+}
+
+#section-counter {
+    background-color: rgb(40, 40, 40);
+}
+
+#footer_h5 {
+    color: white;
 }
