@@ -4845,7 +4845,7 @@ textarea {
 #p4_developer_names {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 0;
+    padding: 0;
 }
 
 #p4_developer_names span {
@@ -4863,14 +4863,14 @@ textarea {
 
 .p4_bar_wrapper::after {
     content: "";
-    height: 100%;
+    height: 20%;
     width: 120%;
     background-color: rgb(40, 40, 40);
     -webkit-transform: rotate(-2deg);
     -ms-transform: rotate(-2deg);
     transform: rotate(-2deg);
     position: absolute;
-    bottom: -90%;
+    bottom: -10%;
     left: -5%;
     z-index: 95;
 }
@@ -4893,9 +4893,16 @@ textarea {
 
     /* Hide vertical bar at this breakpoint */
     .p4_asoul_bar_vert {
-        visibility: hidden;
+        display: none;
     }
 }
+
+@media screen and (max-width: 1199px) {
+    .p4_asoul_bar_vert {
+        width: 10rem;
+    }
+}
+/* End of part 4 */
 
 @media screen and (max-width: 768px)  {
     .p3_imgwrapper {
