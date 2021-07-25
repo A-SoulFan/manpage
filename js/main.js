@@ -165,6 +165,12 @@ $(document).ready(function($) {
     };
     OnePageNav();
 
+    // part4 get developer list
+    var instantiateDeveloperList = function() {
+        $('#p4_developer_names').append(Array(76).fill('<span>阿草</span>').join(''))
+    }
+    instantiateDeveloperList();
+
     // part1 animation
     part1AnimationClass()
 });
@@ -232,6 +238,7 @@ function part1AnimationClass() {
     $(window).scroll(function(e) {
         part1Animation()
     })
+
     function part1Animation() {
         var scrollTop = $(document).scrollTop();
         var docTop = Number(scrollTop) + Number(windowHeight)
