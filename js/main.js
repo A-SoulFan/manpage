@@ -170,8 +170,7 @@ $(document).ready(function($) {
 
     // part4 get developer list
     var instantiateDeveloperList = function() {
-        $('#developer-names').append(Array(76).fill('<span>阿草</span>').join(''))
-        console.log($('#developer-names'));
+        $('#p4_developer_names').append(Array(76).fill('<span>阿草</span>').join(''))
     }
     instantiateDeveloperList();
 });
