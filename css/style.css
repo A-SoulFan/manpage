@@ -4861,7 +4861,8 @@ textarea {
     width: 100%;
 }
 
-.p4_bar_bottom {
+.p4_bar_wrapper::after {
+    content: "";
     height: 100%;
     width: 120%;
     background-color: rgb(40, 40, 40);
@@ -4880,7 +4881,7 @@ textarea {
     position: absolute;
     right: 10%;
     bottom: 0;
-    background: linear-gradient(to left bottom, rgba(156, 105, 214, 0.8), rgb(217, 126, 220, 0.8));
+    background: linear-gradient(to left bottom, rgba(156, 105, 214, 0.5), rgb(217, 126, 220, 0.9));
     z-index: 90;
 }
 
