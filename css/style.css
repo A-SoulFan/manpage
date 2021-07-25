@@ -4941,7 +4941,7 @@ textarea {
 #p4_developer_names {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 0;
+    padding: 0;
 }
 
 #p4_developer_names span {
@@ -4957,15 +4957,16 @@ textarea {
     width: 100%;
 }
 
-.p4_bar_bottom {
-    height: 100%;
+.p4_bar_wrapper::after {
+    content: "";
+    height: 50%;
     width: 120%;
     background-color: rgb(40, 40, 40);
     -webkit-transform: rotate(-2deg);
     -ms-transform: rotate(-2deg);
     transform: rotate(-2deg);
     position: absolute;
-    bottom: -90%;
+    bottom: -40%;
     left: -5%;
     z-index: 95;
 }
@@ -4976,7 +4977,7 @@ textarea {
     position: absolute;
     right: 10%;
     bottom: 0;
-    background: linear-gradient(to left bottom, rgba(156, 105, 214, 0.8), rgb(217, 126, 220, 0.8));
+    background: linear-gradient(45deg, rgb(217, 126, 220, 1), rgba(185, 110, 218, 0.8) 50%, rgba(156, 105, 214, 0.3));
     z-index: 90;
 }
 
@@ -4990,6 +4991,21 @@ textarea {
         visibility: hidden;
     }
 }
+
+@media screen and (max-width: 1199px) {
+    .p4_asoul_bar_vert {
+        width: 10rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .p4_bar_wrapper::after {
+        bottom: -20%;
+    }
+}
+
+
+/* End of part 4 */
 
 @media screen and (max-width: 768px) {
     .p3_imgwrapper {
