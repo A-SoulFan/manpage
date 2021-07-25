@@ -173,6 +173,12 @@ $(document).ready(function($) {
 
     // part1 animation
     part1AnimationClass()
+
+    // part4 get developer list
+    var instantiateDeveloperList = function() {
+        $('#p4_developer_names').append(Array(76).fill('<span>阿草</span>').join(''))
+    }
+    instantiateDeveloperList();
 });
 //getosinfo
 function getOsInfo() {
@@ -225,7 +231,6 @@ $(".navbar-toggler").blur(function(event) {
         $(".navbar-collapse").collapse('hide');
     }
 });
-
 
 function part1AnimationClass() {
 
