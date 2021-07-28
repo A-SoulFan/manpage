@@ -3212,7 +3212,6 @@ body {
 }
 
 a {
-
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
@@ -3396,8 +3395,7 @@ h5,
     letter-spacing: .1em;
 }
 
-.snh48 {
-}
+.snh48 {}
 
 .bg-image,
 .ftco-cover {
@@ -4052,7 +4050,7 @@ textarea {
 }
 
 .Backgroundimage {
-    background: url(../images/BackGround.gif) repeat center center;
+    background: url(../images/BackGround.webp) repeat center center;
     background-size: cover;
     width: 100%;
     text-align: center;
@@ -4597,7 +4595,7 @@ textarea {
     cursor: pointer;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     width: 100%;
     height: 100%;
     /* p3背景图模糊（图片与图片之间会产生黑边）*/
@@ -4609,7 +4607,7 @@ textarea {
 }
 
 .p3_img_2 {
-    background-position-y:20%!important ;
+    background-position-y: 20%!important;
     background-image: url(../images/D.png);
 }
 
