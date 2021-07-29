@@ -1,3 +1,31 @@
+(function () {
+    function setOnImageLoaded(image, callback) {
+        if (image.complete) {
+            callback();
+        } else {
+            image.onload = callback;
+        }
+    }
+
+    var backgroundImageId = 'background-image';
+    var placeholder = document.querySelector('#' + backgroundImageId);
+
+    setOnImageLoaded(placeholder, function () {
+        if ($('#ftco-loader').length > 0) {
+            $('#ftco-loader').removeClass('show');
+        }
+    });
+
+    var backgroundImage = new Image();
+
+    backgroundImage.id = backgroundImageId;
+    backgroundImage.src = './images/BackGround.webp';
+
+    setOnImageLoaded(backgroundImage, function () {
+        placeholder.parentNode.replaceChild(backgroundImage, placeholder);
+    });
+})();
+
 $(document).ready(function($) {
 
     "use strict";

@@ -21,6 +21,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <div style="width:100%; height:100%;display: -webkit-flex;display: flex; flex-direction: row; flex-wrap: nowrap; flex-shrink: 1; justify-content: center; align-items: center; ">
+        <img src="./images/Loader.webp " style="width: 64px; position: relative;">
+    </div>
+</div>
+
 <!-- 头部导航栏 -->
 
 <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
@@ -289,30 +296,6 @@
     </div>
 </footer>
 
-<!-- loader -->
-<div id="ftco-loader" class="show fullscreen">
-    <div style="width:100%; height:100%;display: -webkit-flex;display: flex; flex-direction: row; flex-wrap: nowrap; flex-shrink: 1; justify-content: center; align-items: center; ">
-        <img src="./images/Loader.webp " style="width: 64px; position: relative;">
-    </div>
-</div>
-
-<script>
-    (function () {
-        var backgroundImage = new Image();
-        var backgroundImageId = 'background-image';
-        function onBackgroundImageLoaded() {
-            var oldImage = document.querySelector('#' + backgroundImageId);
-            oldImage.parentNode.replaceChild(backgroundImage, oldImage);
-        }
-        backgroundImage.id = backgroundImageId;
-        backgroundImage.src = './images/BackGround.webp';
-        if (backgroundImage.complete) {
-            onBackgroundImageLoaded();
-        } else {
-            backgroundImage.onload = onBackgroundImageLoaded;
-        }
-    })();
-</script>
 <!--<script src="js/jquery.min.js"></script>-->
 <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.2.1/jquery.min.js"></script>
 <!--<script src="js/popper.min.js"></script>-->
