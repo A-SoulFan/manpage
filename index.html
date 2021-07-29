@@ -46,7 +46,8 @@
 
 <section class="ftco-cover ftco-slant ftco-slant-dark" id="Main">
     <div class="Backgroundimage">
-        <div class="container" style="margin-top: -60px;">
+        <img id="background-image" src="images/BackGround_static.webp" alt="">
+        <div id="home-container" class="container" style="margin-top: -60px;">
             <div class="row align-items-center text-center ftco-vh-100">
                 <div class="col-md-10 ftco-animate" style="text-align:left; text-decoration: none;">
                     <h1 class="ftco-heading ">A-SOUL</h1>
@@ -295,24 +296,25 @@
     </div>
 </div>
 
-<!--<script src="js/jquery.min.js"></script>-->
-<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.2.1/jquery.min.js"></script>
 <script>
     (function () {
-        var backgroundImageSrc = '/images/BackGround.webp';
-        function onBackgroundImageLoaded() {
-            $('.Backgroundimage')[0].style.backgroundImage = 'url(' + backgroundImageSrc + ')';
-        }
         var backgroundImage = new Image();
-        backgroundImage.src = backgroundImageSrc;
+        var backgroundImageId = 'background-image';
+        function onBackgroundImageLoaded() {
+            var oldImage = document.querySelector('#' + backgroundImageId);
+            oldImage.parentNode.replaceChild(backgroundImage, oldImage);
+        }
+        backgroundImage.id = backgroundImageId;
+        backgroundImage.src = '/images/BackGround.webp';
         if (backgroundImage.complete) {
             onBackgroundImageLoaded();
         } else {
             backgroundImage.onload = onBackgroundImageLoaded;
-            backgroundImage.onerror = onBackgroundImageLoaded;
         }
     })();
 </script>
+<!--<script src="js/jquery.min.js"></script>-->
+<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.2.1/jquery.min.js"></script>
 <!--<script src="js/popper.min.js"></script>-->
 <!--<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/popper.js/1.16.1/popper.js"></script>-->
 <!--<script src="js/bootstrap.min.js"></script>-->

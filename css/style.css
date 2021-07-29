@@ -4050,8 +4050,8 @@ textarea {
 }
 
 .Backgroundimage {
-    background: url(../images/BackGround_static.webp) repeat center center;
-    background-size: cover;
+    /*background: url(../images/BackGround_static.webp) repeat center center;*/
+    /*background-size: cover;*/
     width: 100%;
     text-align: center;
     position: relative;
@@ -4068,16 +4068,27 @@ textarea {
     user-select: none;
 }
 
-.Backgroundimage:after {
-    content: "";
+/*.Backgroundimage:after {*/
+/*    content: "";*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    background: inherit;*/
+/*    filter: blur(5px);*/
+/*    z-index: -9;*/
+/*}*/
+
+#background-image {
     width: 100%;
     height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: inherit;
     filter: blur(5px);
-    z-index: -9;
+    object-fit: cover;
+}
+
+#home-container {
+    position: absolute;
 }
 
 .patr1 {
