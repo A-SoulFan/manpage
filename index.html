@@ -297,8 +297,24 @@
 
 <!--<script src="js/jquery.min.js"></script>-->
 <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    (function () {
+        var backgroundImageSrc = '/images/BackGround.webp';
+        function onBackgroundImageLoaded() {
+            $('.Backgroundimage')[0].style.backgroundImage = 'url(' + backgroundImageSrc + ')';
+        }
+        var backgroundImage = new Image();
+        backgroundImage.src = backgroundImageSrc;
+        if (backgroundImage.complete) {
+            onBackgroundImageLoaded();
+        } else {
+            backgroundImage.onload = onBackgroundImageLoaded;
+            backgroundImage.onerror = onBackgroundImageLoaded;
+        }
+    })();
+</script>
 <!--<script src="js/popper.min.js"></script>-->
-<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/popper.js/1.16.1/popper.js"></script>
+<!--<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/popper.js/1.16.1/popper.js"></script>-->
 <!--<script src="js/bootstrap.min.js"></script>-->
 <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap-v4-rtl/4.1.1-1/js/bootstrap.js"></script>
 <!--<script src="js/jquery.easing.1.3.js"></script>-->

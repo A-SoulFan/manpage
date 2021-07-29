@@ -4050,7 +4050,7 @@ textarea {
 }
 
 .Backgroundimage {
-    background: url(../images/BackGround.webp) repeat center center;
+    background: url(../images/BackGround_static.webp) repeat center center;
     background-size: cover;
     width: 100%;
     text-align: center;
