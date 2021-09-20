@@ -19,7 +19,7 @@
     var backgroundImage = new Image();
 
     backgroundImage.id = backgroundImageId;
-    backgroundImage.src = './images/BackGround.webp';
+    backgroundImage.src = '../images/BackGround.webp';
 
     setOnImageLoaded(backgroundImage, function () {
         placeholder.parentNode.replaceChild(backgroundImage, placeholder);
