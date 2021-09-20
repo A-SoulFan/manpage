@@ -3466,7 +3466,7 @@ h5,
 
 .ftco-slant:after {
     width: 120%;
-    height: 240px;
+    height: 200px;
     left: -10%;
     background: rgb(40, 40, 40);
     -webkit-transform: rotate(-2deg);
@@ -4219,8 +4219,8 @@ textarea {
     }
 
     .part1-mobile-introduce {
-        display: block;
-        padding: 0 10px;
+        display:list-item;
+        padding: 10px;
     }
 
     .part1-mobile-introduce,
@@ -4239,9 +4239,23 @@ textarea {
 
     .mobile-decorate {
         color: #fff;
-        margin-top: -100px;
-        font-size: 14px;
-        line-height: 10px;
+        font-size: 10px;
+        line-height: 30px;
+        position:static;
+        user-select: none;
+
+        word-break:break-all;
+    }
+    .mobile-decoratep {
+        margin:auto;
+        word-break:break-all;
+        color: #fff;
+        font-size: 10px;
+        line-height: 30px;
+        position:relative;
+        user-select: none;
+
+       
     }
 
     .mobile-decorate-2 {
