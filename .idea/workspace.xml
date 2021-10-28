@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9278ed74-6200-4555-9edf-9d9919d0d244" name="默认更改列表" comment="添加了主页的英文支持">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/en/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/en/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +38,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -61,6 +65,7 @@
       <workItem from="1626945162556" duration="863000" />
       <workItem from="1632106268699" duration="1204000" />
       <workItem from="1632155810932" duration="26000" />
+      <workItem from="1635389439825" duration="417000" />
     </task>
     <task id="LOCAL-00001" summary="添加了主页的英文支持">
       <created>1632106548078</created>
